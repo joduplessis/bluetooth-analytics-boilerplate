@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:id="@+id/imageView3"
+        android:background="@drawable/listbackground"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="2dp" />
+
+    <ImageView
+        android:layout_width="90dp"
+        android:layout_height="80dp"
+        android:id="@+id/icon"
+        android:layout_alignTop="@+id/imageView3"
+        android:layout_alignStart="@+id/imageView3"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="voucher"
+        android:id="@+id/title"
+        android:layout_alignTop="@+id/icon"
+        android:layout_marginLeft="20dp"
+        android:layout_alignEnd="@+id/imageView3"
+        android:layout_toEndOf="@+id/icon"
+        android:layout_marginRight="20dp"
+        android:textColor="#ff9f9691"
+        android:textSize="14dp"
+        android:layout_marginBottom="0dp"
+        android:textIsSelectable="false"
+        android:layout_marginTop="7dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Thank you for shopping  with us, have R100 off ..."
+        android:id="@+id/description"
+        android:layout_below="@+id/title"
+        android:layout_alignStart="@+id/title"
+        android:layout_alignEnd="@+id/imageView3"
+        android:layout_marginRight="20dp"
+        android:textColor="#ff5b5551"
+        android:textSize="14dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/unread"
+        android:background="@drawable/listbackground_unread"
+        android:layout_alignTop="@+id/imageView3"
+        android:layout_alignEnd="@+id/imageView3"
+        android:layout_alignBottom="@+id/imageView3" />
+</RelativeLayout>

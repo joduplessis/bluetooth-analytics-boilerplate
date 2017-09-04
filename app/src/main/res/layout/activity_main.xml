@@ -1,0 +1,168 @@
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:id="@+id/colorbar"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/colorbar" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#ffe3ad4f">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Searching ..."
+                android:id="@+id/welcome"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#ffffffff"
+                android:textSize="16dp"
+                android:textIsSelectable="true"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignEnd="@+id/unread"
+                android:layout_marginStart="74dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="0 unread messages"
+                android:id="@+id/unread"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#ffe3ad4f"
+                android:textSize="12dp"
+                android:textIsSelectable="true"
+                android:layout_alignTop="@+id/welcome"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/rounded"
+                android:padding="3dp" />
+
+        </RelativeLayout>
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView"
+            android:divider="#00000000"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Sorry, there are no notifications."
+            android:id="@+id/nomessages"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#ff006c71"
+            android:textSize="12dp"
+            android:textIsSelectable="true"
+            android:layout_marginTop="10dp"
+            android:padding="5dp" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/popup_panel"
+        android:background="@drawable/overlay">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:id="@+id/colorbar2"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/colorbar" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="330dp"
+                android:layout_height="382dp"
+                android:id="@+id/popup"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/popupbackground" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="take bucks off"
+                android:id="@+id/line1"
+                android:layout_alignTop="@+id/popup"
+                android:layout_alignStart="@+id/popup"
+                android:layout_alignEnd="@+id/popup"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="60dp"
+                android:textColor="#ff03949a"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="R100"
+                android:id="@+id/line2"
+                android:layout_below="@+id/line1"
+                android:layout_alignEnd="@+id/line1"
+                android:layout_alignStart="@+id/popup"
+                android:gravity="center_horizontal"
+                android:textColor="#ff006c71"
+                android:textSize="50dp" />
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Here’s a voucher for being awesome, and also for shopping at our Gateway store for the 4th time this month. month."
+                android:id="@+id/line3"
+                android:layout_below="@+id/line2"
+                android:layout_centerHorizontal="true"
+                android:textColor="#ff006c71"
+                android:textSize="16dp" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="OKAY"
+                android:id="@+id/button"
+                android:layout_below="@+id/line3"
+                android:layout_alignEnd="@+id/line3"
+                android:layout_marginTop="20dp"
+                android:textColor="#ff006c71"
+                android:background="@drawable/button"
+                android:textSize="12dp"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>
